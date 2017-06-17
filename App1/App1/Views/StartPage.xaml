@@ -4,7 +4,9 @@
              x:Class="App1.Views.StartPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Wzory - fizyka Klasa 1-3 Gim" FontSize="Large" TextColor="DarkBlue" HorizontalOptions="Center" Font="serif" FontAttributes="Italic, Bold" />
+            <Label Text="Wzory - fizyka Klasa 1-3 Gim" FontSize="Large" TextColor="DarkBlue" HorizontalOptions="Center" Font="serif" FontAttributes="Italic, Bold" BackgroundColor="LightYellow" />
+            <Label BackgroundColor="LightBlue" />
+            <Label BackgroundColor="LightYellow" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
