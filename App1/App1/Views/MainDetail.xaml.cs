@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,15 @@ namespace App1.Views
     {
         public MainDetail()
         {
+            var viewModel = new MainDetailViewModel() { Text = "Test" };
             InitializeComponent();
+            BindingContext = viewModel;
+        }
+
+        public MainDetail(MainDetailViewModel viewModel)
+        {
+            InitializeComponent();
+            BindingContext = viewModel;
         }
     }
 }

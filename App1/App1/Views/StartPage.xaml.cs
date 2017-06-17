@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace App1
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace App1.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class StartPage : ContentPage
     {
-        public MainPage()
+        public StartPage()
         {
             InitializeComponent();
         }
