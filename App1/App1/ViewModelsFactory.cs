@@ -20,5 +20,16 @@ namespace App1
                 }
             };
         }
+
+        public static MainDetailViewModel CreateRuchFormulas()
+        {
+            return new MainDetailViewModel()
+            {
+                Formulas = new List<string>()
+                {
+                  "v=s/t"
+                }
+            };
+        }
     }
 }

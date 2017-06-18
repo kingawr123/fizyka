@@ -15,7 +15,7 @@ namespace App1.ViewModels
             MenuItems = new ObservableCollection<MainMenuItem>(new[]
             {
                 new MainMenuItem(ViewModelsFactory.CreateBasicFormulas()) { Id = 0, Title = "Podstawowe wzory" },
-                new MainMenuItem(new MainDetailViewModel()) { Id = 1, Title = "Ruch" },
+                new MainMenuItem(ViewModelsFactory.CreateRuchFormulas()) { Id = 1, Title = "Ruch" },
                 new MainMenuItem(new MainDetailViewModel()) { Id = 2, Title = "Energia" },
                
             });
