@@ -4,6 +4,12 @@
              x:Class="App1.Views.MainDetail"
              Title="Detail">
   <StackLayout Padding="10">
-    <Label Text="{Binding Text}"/>
-  </StackLayout>
+        <ListView x:Name="FormulasView" ItemsSource="{Binding Formulas}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

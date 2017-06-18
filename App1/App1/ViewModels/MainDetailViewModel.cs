@@ -8,6 +8,6 @@ namespace App1.ViewModels
 {
     public class MainDetailViewModel
     {
-        public string Text { get; set; }
+        public List<string> Formulas { get; set; }
     }
 }

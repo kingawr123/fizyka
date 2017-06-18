@@ -13,13 +13,6 @@ namespace App1.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainDetail : ContentPage
     {
-        public MainDetail()
-        {
-            var viewModel = new MainDetailViewModel() { Text = "Test" };
-            InitializeComponent();
-            BindingContext = viewModel;
-        }
-
         public MainDetail(MainDetailViewModel viewModel)
         {
             InitializeComponent();

@@ -14,9 +14,9 @@ namespace App1.ViewModels
         {
             MenuItems = new ObservableCollection<MainMenuItem>(new[]
             {
-                new MainMenuItem(new MainDetailViewModel() { Text ="tekst1" }) { Id = 0, Title = "Podstawowe wzory" },
-                new MainMenuItem(new MainDetailViewModel() { Text ="tekst2" }) { Id = 1, Title = "Ruch" },
-                new MainMenuItem(new MainDetailViewModel() { Text ="tekst3" }) { Id = 2, Title = "Energia" },
+                new MainMenuItem(ViewModelsFactory.CreateBasicFormulas()) { Id = 0, Title = "Podstawowe wzory" },
+                new MainMenuItem(new MainDetailViewModel()) { Id = 1, Title = "Ruch" },
+                new MainMenuItem(new MainDetailViewModel()) { Id = 2, Title = "Energia" },
                
             });
         }
