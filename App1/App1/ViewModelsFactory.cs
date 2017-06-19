@@ -16,7 +16,8 @@ namespace App1
                 Formulas = new List<string>()
                 {
                     "a=F/m",
-                    "Fg=m*g"
+                    "Fg=m*g",
+                    "T=(273+t)"
                 }
             };
         }
@@ -27,7 +28,20 @@ namespace App1
             {
                 Formulas = new List<string>()
                 {
-                  "v=s/t"
+                  "v=s/t",
+                  "a=v/t"
+                }
+            };
+        }
+
+        public static MainDetailViewModel CreateEnergiaFormulas()
+        {
+            return new MainDetailViewModel()
+            {
+                Formulas = new List<string>()
+                {
+                    "Ew=Q+W",
+                    "Q=c*m*T"
                 }
             };
         }

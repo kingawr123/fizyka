@@ -16,7 +16,7 @@ namespace App1.ViewModels
             {
                 new MainMenuItem(ViewModelsFactory.CreateBasicFormulas()) { Id = 0, Title = "Podstawowe wzory" },
                 new MainMenuItem(ViewModelsFactory.CreateRuchFormulas()) { Id = 1, Title = "Ruch" },
-                new MainMenuItem(new MainDetailViewModel()) { Id = 2, Title = "Energia" },
+                new MainMenuItem(ViewModelsFactory.CreateEnergiaFormulas()) { Id = 2, Title = "Energia" },
                
             });
         }
