@@ -15,7 +15,7 @@ namespace App1
             {
                 Formulas = new List<string>()
                 {
-                    "a=F/m",
+                    "g=F/m",
                     "Fg=m*g",
                     "T=(273+t)"
                 }
@@ -40,8 +40,22 @@ namespace App1
             {
                 Formulas = new List<string>()
                 {
+                    "Ek=(m*v^2)/2",
+                    "Ep=m*g*h",
                     "Ew=Q+W",
                     "Q=c*m*T"
+                }
+            };
+        }
+
+        public static MainDetailViewModel CreateCisnienieFormulas()
+        {
+            return new MainDetailViewModel()
+            {
+                Formulas = new List<string>()
+                {
+                    "p=Fp/S",
+                    "ph=p*g*h"
                 }
             };
         }

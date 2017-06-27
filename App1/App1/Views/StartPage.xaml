@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Views.StartPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Wzory - fizyka Klasa 1-3 Gim" FontSize="Large" TextColor="DarkBlue" HorizontalOptions="Center" Font="serif" FontAttributes="Italic, Bold" BackgroundColor="White" />
-            <Label BackgroundColor="LightBlue" />
+        <StackLayout BackgroundColor="AliceBlue">
+            <Label  FontSize="Large" TextColor="DarkBlue" HorizontalOptions="Center" FontAttributes="Italic, Bold"
+                Text="Wzory - fizyka - Klasa 1-3 Gim"
+             />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
