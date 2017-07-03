@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModelsFactory.cs" />
+    <Compile Include="ViewModels\Formula.cs" />
     <Compile Include="ViewModels\MainDetailViewModel.cs" />
     <Compile Include="Views\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>

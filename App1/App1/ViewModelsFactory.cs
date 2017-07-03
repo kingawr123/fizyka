@@ -13,11 +13,11 @@ namespace App1
         {
             return new MainDetailViewModel()
             {
-                Formulas = new List<string>()
+                Formulas = new List<Formula>()
                 {
-                    "g=F/m",
-                    "Fg=m*g",
-                    "T=(273+t)"
+                    new Formula("a=F/m"),
+                    new Formula("Fg=m*g"),
+                    new Formula("T=(273+t)")
                 }
             };
         }
@@ -26,10 +26,10 @@ namespace App1
         {
             return new MainDetailViewModel()
             {
-                Formulas = new List<string>()
+                Formulas = new List<Formula>()
                 {
-                  "v=s/t",
-                  "a=v/t"
+                  new Formula("v=s/t"),
+                  new Formula("a=v/t")
                 }
             };
         }
@@ -38,12 +38,12 @@ namespace App1
         {
             return new MainDetailViewModel()
             {
-                Formulas = new List<string>()
+                Formulas = new List<Formula>()
                 {
-                    "Ek=(m*v^2)/2",
-                    "Ep=m*g*h",
-                    "Ew=Q+W",
-                    "Q=c*m*T"
+                    new Formula("Ek=(m*v^2)/2"),
+                    new Formula("Ep=m*g*h"),
+                    new Formula("Ew=Q+W"),
+                    new Formula("Q=c*m*T")
                 }
             };
         }
@@ -52,10 +52,10 @@ namespace App1
         {
             return new MainDetailViewModel()
             {
-                Formulas = new List<string>()
+                Formulas = new List<Formula>()
                 {
-                    "p=Fp/S",
-                    "ph=p*g*h"
+                    new Formula("p=Fp/S"),
+                    new Formula("ph=p*g*h")
                 }
             };
         }
