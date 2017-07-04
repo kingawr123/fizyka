@@ -15,9 +15,27 @@ namespace App1
             {
                 Formulas = new List<Formula>()
                 {
-                    new Formula("a=F/m"),
-                    new Formula("Fg=m*g"),
-                    new Formula("T=(273+t)")
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("a=F/m"),
+                        }
+                    ),
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("Fg=m*g"),
+                        }
+                    ),
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("T=(273+t)"),
+                        }
+                    ),
                 }
             };
         }
@@ -28,8 +46,20 @@ namespace App1
             {
                 Formulas = new List<Formula>()
                 {
-                  new Formula("v=s/t"),
-                  new Formula("a=v/t")
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("v=s/t"),
+                        }
+                    ),
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("a=v/t"),
+                        }
+                    ),
                 }
             };
         }
@@ -40,10 +70,34 @@ namespace App1
             {
                 Formulas = new List<Formula>()
                 {
-                    new Formula("Ek=(m*v^2)/2"),
-                    new Formula("Ep=m*g*h"),
-                    new Formula("Ew=Q+W"),
-                    new Formula("Q=c*m*T")
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("Ek=(m*v^2)/2"),
+                        }
+                    ),
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("Ep=m*g*h"),
+                        }
+                    ),
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("Ew=Q+W"),
+                        }
+                    ),
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("Q=c*m*T"),
+                        }
+                    ),
                 }
             };
         }
@@ -54,8 +108,25 @@ namespace App1
             {
                 Formulas = new List<Formula>()
                 {
-                    new Formula("p=Fp/S"),
-                    new Formula("ph=p*g*h")
+                    new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("p=Fp/S"),
+                            new Equation("Fp=p*S"),
+                            new Equation("S=Fp/p")
+                        }
+                    ),
+
+                     new Formula
+                    (
+                        new List<Equation>()
+                        {
+                            new Equation("ph=p*g*h"),       
+                        }
+                    ),
+
+                    
                 }
             };
         }

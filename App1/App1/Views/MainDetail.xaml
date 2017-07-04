@@ -7,7 +7,7 @@
         <ListView x:Name="FormulasView" ItemsSource="{Binding Formulas}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding MainEquation}" TextColor="DeepSkyBlue"/>
+                    <TextCell Text="{Binding MainEquation}" TextColor="DeepSkyBlue" Command="{Binding FormulaClicked}" CommandParameter="{Binding}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -39,8 +39,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModelsFactory.cs" />
+    <Compile Include="ViewModels\Equation.cs" />
     <Compile Include="ViewModels\Formula.cs" />
     <Compile Include="ViewModels\MainDetailViewModel.cs" />
+    <Compile Include="Views\FormulaPage.xaml.cs">
+      <DependentUpon>FormulaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
@@ -97,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MainDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FormulaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
