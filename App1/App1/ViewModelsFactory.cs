@@ -19,21 +19,20 @@ namespace App1
                     (
                         new List<Equation>()
                         {
+                            new Equation("Siła grawitacji"),
                             new Equation("a=F/m"),
+                            new Equation("F=m*a"),
+                            new Equation("m=F/a")
                         }
                     ),
+ 
                     new Formula
                     (
                         new List<Equation>()
                         {
-                            new Equation("Fg=m*g"),
-                        }
-                    ),
-                    new Formula
-                    (
-                        new List<Equation>()
-                        {
-                            new Equation("T=(273+t)"),
+                            new Equation("Zamiana stopni celcjusza na kelwina"),
+                            new Equation("T=273+t"),
+                            new Equation("t=T-273")
                         }
                     ),
                 }
@@ -50,14 +49,20 @@ namespace App1
                     (
                         new List<Equation>()
                         {
+                            new Equation("Ruch jednostajny prostoliniowy"),
                             new Equation("v=s/t"),
+                            new Equation("s=v*t"),
+                            new Equation("t=s/v")
                         }
                     ),
                     new Formula
                     (
                         new List<Equation>()
                         {
+                            new Equation("Ruch jednostajnie przyśpieszony"),
                             new Equation("a=v/t"),
+                            new Equation("v=a*t"),
+                            new Equation("s=(a*t^2)/2")
                         }
                     ),
                 }
@@ -74,28 +79,40 @@ namespace App1
                     (
                         new List<Equation>()
                         {
+                            new Equation("Energia kinetyczna"),
                             new Equation("Ek=(m*v^2)/2"),
+                            new Equation("m=2*Ek/v^2"),
+                            new Equation("v=√(2*Ek)/m")
                         }
                     ),
                     new Formula
                     (
                         new List<Equation>()
                         {
+                            new Equation("Energia potencjalna"),
                             new Equation("Ep=m*g*h"),
+                            new Equation("h=Ep/(m*g)"),
+                            new Equation("m=Ep/(g*h)")
                         }
                     ),
                     new Formula
                     (
                         new List<Equation>()
                         {
+                            new Equation("Energia wewnętrzna"),
                             new Equation("Ew=Q+W"),
+                            new Equation("Ew=Q"),
+                            new Equation("Ew=W")
                         }
                     ),
                     new Formula
                     (
                         new List<Equation>()
                         {
-                            new Equation("Q=c*m*T"),
+                            new Equation("Ciepło"),
+                            new Equation("Q=Cw*m*T"),
+                            new Equation("m=Q/(Cw*T)"),
+                            new Equation("T=Q/(m*Cw)")
                         }
                     ),
                 }
@@ -112,6 +129,7 @@ namespace App1
                     (
                         new List<Equation>()
                         {
+                            new Equation("Ciśnienie atmosferyczne"),
                             new Equation("p=Fp/S"),
                             new Equation("Fp=p*S"),
                             new Equation("S=Fp/p")
@@ -122,7 +140,10 @@ namespace App1
                     (
                         new List<Equation>()
                         {
-                            new Equation("ph=p*g*h"),       
+                            new Equation("Ciśnienie hydrostatyczne"),
+                            new Equation("ph=d*g*h"),
+                            new Equation("d=ph/(g*h)"),
+                            new Equation("h=ph/(d*g)")
                         }
                     ),
 
