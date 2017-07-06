@@ -11,15 +11,13 @@ namespace App1.ViewModels
 {
     public class Formula
     {
-        public Formula(List<Equation> listOfEquations)
+        public Formula(string name, List<Equation> listOfEquations)
         {
+            this.Name = name;
             this.ListOfEquations = listOfEquations;
         }
 
-        public string MainEquation
-        {
-            get => ListOfEquations?.FirstOrDefault()?.EquationString;
-        }
+        public string Name { get; private set; }
 
         public List<Equation> ListOfEquations { get; set; }
 
@@ -30,7 +28,7 @@ namespace App1.ViewModels
             var formula = form as Formula;
 
             var page = new FormulaPage(formula);
-            page.Title = formula.MainEquation;
+            page.Title = formula.Name;
 
             (App.Current.MainPage as MasterDetailPage).Detail = new NavigationPage(page);
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
