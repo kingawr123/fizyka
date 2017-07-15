@@ -4,7 +4,7 @@
              x:Class="App1.Views.EquationPage">
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <ListView x:Name="ArgumentsView" ItemsSource="{Binding Arguments}">
+            <ListView x:Name="ArgumentsView" ItemsSource="{Binding Arguments}" VerticalOptions="Start">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -21,6 +21,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Image Source="{Binding Image}" VerticalOptions="CenterAndExpand" />
             <Button Text="Oblicz" Command="{Binding Calculate}"></Button>
             <Grid>
                 <Label Text="{Binding ResultName}" TextColor="DeepSkyBlue" Grid.Column="0" HorizontalTextAlignment="End" VerticalOptions="Center"/>

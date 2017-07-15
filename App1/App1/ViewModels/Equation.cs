@@ -18,24 +18,29 @@ namespace App1.ViewModels
             this.EquationString = equation;
         }
 
-        public Equation(string equation, Func<double, double, double> func, string resultName, string resultUnit, params (string name, string unit)[] arguments)
+        public Equation(string equation, string resultName, string resultUnit, string imageName, params (string name, string unit)[] arguments)
         {
             this.EquationString = equation;
-            this.Func = func;
             this.ResultName = resultName;
             this.ResultUnit = resultUnit;
             Arguments = arguments.Select(arg => new Argument(arg.name, arg.unit)).ToList();
             Calculate = new Command(CalculateMethod);
+            if(imageName != null)
+            {
+                Image = ImageSource.FromResource($"App1.Images.{imageName}");
+            }
         }
 
-        public Equation(string equation, Func<double, double, double, double> func, string resultName, string resultUnit, params (string name, string unit)[] arguments)
+        public Equation(string equation, Func<double, double, double> func, string resultName, string resultUnit, string imageName = null, params (string name, string unit)[] arguments) 
+            : this(equation, resultName, resultUnit, imageName, arguments)
         {
-            this.EquationString = equation;
             this.Func = func;
-            this.ResultName = resultName;
-            this.ResultUnit = resultUnit;
-            Arguments = arguments.Select(arg => new Argument(arg.name, arg.unit)).ToList();
-            Calculate = new Command(CalculateMethod);
+        }
+
+        public Equation(string equation, Func<double, double, double, double> func, string resultName, string resultUnit, string imageName = null, params (string name, string unit)[] arguments)
+            : this(equation, resultName, resultUnit, imageName, arguments)
+        {
+            this.Func = func;
         }
 
         public string EquationString { get; set; }
@@ -47,6 +52,8 @@ namespace App1.ViewModels
         public string ResultName { get; set; }
 
         public string ResultUnit { get; set; }
+
+        public ImageSource Image { get; set; }
 
         private double resultValue;
 
