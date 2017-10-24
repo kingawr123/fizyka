@@ -150,5 +150,54 @@ namespace App1
                 }
             };
         }
+        public static MainDetailViewModel CreateDrganiaFormulas()
+        {
+            return new MainDetailViewModel()
+            {
+                Formulas = new List<Formula>()
+                {
+                    new Formula
+                    (
+                        "Okres",
+                        new List<Equation>()
+                        {
+                            new Equation("T=Δt/n", (t, n) => t / n, "T", "s", "fizyka.png", ("t", "s"), ("n", "-")),
+                            new Equation("T=λ/V", (λ, V) => λ / V, "T", "s", "fizyka.png", ("λ", "m"), ("V", "m/s")),
+                        }
+                    ),
+
+                    new Formula
+                    (
+                        "Częstkotliwość",
+                        new List<Equation>()
+                        {
+                            new Equation("f=", (V, T) => V * T, "λ", "m", "fizyka.png", ("V", "m/s"), ("T", "s")),
+                            new Equation("λ=V/f", (V, f) => V / f, "λ", "m", "fizyka.png", ("V", "m/s"), ("f", "Hz"))
+                        }
+                    ),
+
+                    new Formula
+                    (
+                        "Długość fali",
+                        new List<Equation>()
+                        {
+                            new Equation("λ=V*T", (V, T) => V * T, "λ", "m", "fizyka.png", ("V", "m/s"), ("T", "s")),
+                            new Equation("λ=V/f", (V, f) => V / f, "λ", "m", "fizyka.png", ("V", "m/s"), ("f", "Hz"))
+                        }
+                    ),
+
+                    new Formula
+                    (
+                        "Prędkość fali",
+                        new List<Equation>()
+                        {
+                            new Equation("V=λ/T", (λ, T) => λ / T, "V", "m/s", "fizyka.png", ("λ", "m"), ("T", "s")),
+                            new Equation("V=λ*f", (λ, f) => λ * f, "V", "m/s", "fizyka.png", ("λ", "m"), ("f", "Hz"))
+                        }
+                    ),
+                }
+            };
+        }
+
     }
 }
