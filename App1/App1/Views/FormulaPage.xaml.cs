@@ -18,5 +18,13 @@ namespace App1.Views
             InitializeComponent();
             BindingContext = formula;
         }
+
+        private void FormulasView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(sender is ListView list)
+            {
+                list.SelectedItem = null;
+            }
+        }
     }
 }

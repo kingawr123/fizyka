@@ -9,13 +9,13 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
-                                <Label Text="{Binding Name}" TextColor="DeepSkyBlue" Grid.Column="0" HorizontalTextAlignment="End" VerticalOptions="Center"/>
+                                <Label Text="{Binding Name}" TextColor="{StaticResource MainTextColor}" Grid.Column="0" HorizontalTextAlignment="End" VerticalOptions="Center"/>
                                 <Entry Text="{Binding Value}" Grid.Column="1">
                                     <Entry.Behaviors>
                                         
                                     </Entry.Behaviors>
                                 </Entry>
-                                <Label Text="{Binding Unit}" TextColor="DeepSkyBlue" Grid.Column="2" VerticalOptions="Center"/>
+                                <Label Text="{Binding Unit}" TextColor="{StaticResource MainTextColor}" Grid.Column="2" VerticalOptions="Center"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -24,9 +24,9 @@
             <Image Source="{Binding Image}" VerticalOptions="CenterAndExpand" />
             <Button Text="Oblicz" Command="{Binding Calculate}"></Button>
             <Grid>
-                <Label Text="{Binding ResultName}" TextColor="DeepSkyBlue" Grid.Column="0" HorizontalTextAlignment="End" VerticalOptions="Center"/>
+                <Label Text="{Binding ResultName}" TextColor="{StaticResource MainTextColor}" Grid.Column="0" HorizontalTextAlignment="End" VerticalOptions="Center"/>
                 <Entry Text="{Binding ResultValue, Mode=TwoWay}" Grid.Column="1"/>
-                <Label Text="{Binding ResultUnit}" TextColor="DeepSkyBlue" Grid.Column="2" VerticalOptions="Center"/>
+                <Label Text="{Binding ResultUnit}" TextColor="{StaticResource MainTextColor}" Grid.Column="2" VerticalOptions="Center"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

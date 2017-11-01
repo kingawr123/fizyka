@@ -29,7 +29,7 @@ namespace App1.Views
 
             page.Title = item.Title;
 
-            Detail = new NavigationPage(page);
+            Detail = new NavigationPage(page) { BarBackgroundColor = Color.LightPink};
             IsPresented = false;
 
            MasterPage.ListView.SelectedItem = null;

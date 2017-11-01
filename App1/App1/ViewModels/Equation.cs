@@ -76,7 +76,7 @@ namespace App1.ViewModels
             var page = new EquationPage(equation);
             page.Title = equation.EquationString;
 
-            (App.Current.MainPage as MasterDetailPage).Detail = new NavigationPage(page);
+            await ((App.Current.MainPage as MasterDetailPage).Detail as NavigationPage).Navigation.PushAsync(page);
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
 
         }

@@ -12,6 +12,8 @@ namespace App1.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : ContentPage
     {
+        public StartPage(object viewModel) : this() { }
+
         public StartPage()
         {
             InitializeComponent();

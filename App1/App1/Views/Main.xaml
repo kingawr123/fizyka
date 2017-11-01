@@ -2,14 +2,15 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Views.Main"
-             xmlns:pages="clr-namespace:App1.Views">
+             xmlns:pages="clr-namespace:App1.Views"
+                  >
   <MasterDetailPage.Master>
     <pages:MainMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
-    <NavigationPage>
+    <NavigationPage BarBackgroundColor="LightPink">
       <x:Arguments>
-        <pages:StartPage />
+        <pages:StartPage Title="Strona główna" />
       </x:Arguments>
     </NavigationPage>
   </MasterDetailPage.Detail>

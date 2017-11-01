@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using App1.Views;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -14,11 +15,12 @@ namespace App1.ViewModels
         {
             MenuItems = new ObservableCollection<MainMenuItem>(new[]
             {
-                new MainMenuItem(ViewModelsFactory.CreateBasicFormulas()) { Id = 0, Title = "Podstawowe wzory" },
-                new MainMenuItem(ViewModelsFactory.CreateRuchFormulas()) { Id = 1, Title = "Ruch" },
-                new MainMenuItem(ViewModelsFactory.CreateEnergiaFormulas()) { Id = 2, Title = "Energia" },
-                new MainMenuItem(ViewModelsFactory.CreateCisnienieFormulas()) { Id=3, Title = "Ciśnienie"},
-                new MainMenuItem(ViewModelsFactory.CreateDrganiaFormulas()) { Id=4, Title = "Drgania"} 
+                new MainMenuItem(targetType:  typeof(StartPage)){ Id = 0, Title = "Strona główna"},
+                new MainMenuItem(ViewModelsFactory.CreateBasicFormulas()) { Id = 1, Title = "Podstawowe wzory" },
+                new MainMenuItem(ViewModelsFactory.CreateRuchFormulas()) { Id = 2, Title = "Ruch" },
+                new MainMenuItem(ViewModelsFactory.CreateEnergiaFormulas()) { Id = 3, Title = "Energia" },
+                new MainMenuItem(ViewModelsFactory.CreateCisnienieFormulas()) { Id = 4, Title = "Ciśnienie"},
+                new MainMenuItem(ViewModelsFactory.CreateDrganiaFormulas()) { Id = 5, Title = "Drgania"} 
 
             });
         }

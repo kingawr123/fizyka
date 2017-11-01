@@ -10,9 +10,9 @@ namespace App1.ViewModels
 
     public class MainMenuItem
     {
-        public MainMenuItem(object ViewModel)
+        public MainMenuItem(object ViewModel = null, Type targetType = null)
         {
-            TargetType = typeof(MainDetail);
+            TargetType = targetType ?? typeof(MainDetail);
             this.ViewModel = ViewModel;
         }
         public int Id { get; set; }

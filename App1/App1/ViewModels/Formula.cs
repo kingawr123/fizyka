@@ -30,7 +30,7 @@ namespace App1.ViewModels
             var page = new FormulaPage(formula);
             page.Title = formula.Name;
 
-            (App.Current.MainPage as MasterDetailPage).Detail = new NavigationPage(page);
+            await ((App.Current.MainPage as MasterDetailPage).Detail as NavigationPage).Navigation.PushAsync(page);
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
 
         }

@@ -20,9 +20,9 @@ namespace App1
                         "Siła grawitacji",
                         new List<Equation>()
                         {
-                            new Equation("a=F/m", (F, m) => F / m, "a", "m/s^2", "fizyka.png", ("F", "N"), ("m", "kg")),
-                            new Equation("F=m*a", (m, a) => m * a, "F", "N", "fizyka.png", ("m", "kg"), ("a", "m/s^2")),
-                            new Equation("m=F/a", (F, a) => F / a, "m", "kg", "fizyka.png", ("F", "N"), ("a", "m/s^2"))
+                            new Equation("g=F/m", (F, m) => F / m, "g", "m/s^2", "fizyka.png", ("F", "N"), ("m", "kg")),
+                            new Equation("F=m*g", (m, g) => m * g, "F", "N", "fizyka.png", ("m", "kg"), ("g", "m/s^2")),
+                            new Equation("m=F/g", (F, g) => F / g, "m", "kg", "fizyka.png", ("F", "N"), ("g", "m/s^2"))
                         }
                     ),
  
@@ -31,9 +31,9 @@ namespace App1
                         "Gęstość",
                         new List<Equation>()
                         { 
-                            new Equation("d=v/m", (v, m) => v / m, "d", "kg/m^3", "fizyka.png", ("v", "m^3"), ("m", "kg")),
-                            new Equation("v=d*m", (d, m) => d * m, "v", "m^3", "fizyka.png", ("d", "kg/m^3"), ("m", "kg")),
-                            new Equation("m=v/d", (v, d) => v * d, "m", "kg", "fizyka.png", ("v", "m^3"), ("d", "kg/m^3"))
+                            new Equation("d=m/v", (m, v) => m / v, "d", "kg/m^3", "fizyka.png", ("m", "kg"), ("v", "m^3")),
+                            new Equation("v=m/d", (m, d) => m / d, "v", "m^3", "fizyka.png", ("m", "kg"), ("d", "kg/m^3")),
+                            new Equation("m=v*d", (v, d) => v * d, "m", "kg", "fizyka.png", ("v", "m^3"), ("d", "kg/m^3"))
                         }
                     ),
                 }
@@ -91,9 +91,9 @@ namespace App1
                         "Energia potencjalna",
                         new List<Equation>()
                         {
-                            new Equation("Ep=m*a*h", (m, a, h) => m * a * h, "Ep", "J", "fizyka.png", ("m", "kg"), ("a", "m/s^2"), ("h", "m")),
-                            new Equation("h=Ep/(m*a)", (Ep, m, a) => Ep / (m * a), "h", "m", "fizyka.png", ("Ep", "J"), ("m", "kg"), ("a", "m/s^2")),
-                            new Equation("m=Ep/(a*h)", (Ep, a, h) => Ep / (a * h), "m", "kg", "fizyka.png", ("Ep", "J"), ("a", "m/s^2"), ("h", "m"))
+                            new Equation("Ep=m*g*h", (m, g, h) => m * g * h, "Ep", "J", "fizyka.png", ("m", "kg"), ("g", "m/s^2"), ("h", "m")),
+                            new Equation("h=Ep/(m*g)", (Ep, m, g) => Ep / (m * g), "h", "m", "fizyka.png", ("Ep", "J"), ("m", "kg"), ("g", "m/s^2")),
+                            new Equation("m=Ep/(g*h)", (Ep, g, h) => Ep / (g * h), "m", "kg", "fizyka.png", ("Ep", "J"), ("g", "m/s^2"), ("h", "m"))
                         }
                     ),
                     new Formula
@@ -126,12 +126,12 @@ namespace App1
                 {
                     new Formula
                     (
-                        "Ciśnienie atmosferyczne",
+                        "Ciśnienie",
                         new List<Equation>()
                         {
-                            new Equation("p=Fp/S", (Fp, S) => Fp / S, "p", "Pa", "cisnienie.gif", ("Fp", "N"), ("S", "m^3")),
-                            new Equation("Fp=p*S", (p, S) => p * S, "Fp", "N", "cisnienie.gif", ("p", "Pa"), ("S", "m^3")),
-                            new Equation("S=Fp/p", (Fp, p) => Fp / p, "S", "m^3", "cisnienie.gif", ("Fp", "N"), ("p", "Pa"))
+                            new Equation("p=F/S", (F, S) => F / S, "p", "Pa", "cisnienie.gif", ("F", "N"), ("S", "m^3")),
+                            new Equation("F=p*S", (p, S) => p * S, "Fp", "N", "cisnienie.gif", ("p", "Pa"), ("S", "m^3")),
+                            new Equation("S=F/p", (F, p) => F / p, "S", "m^3", "cisnienie.gif", ("p", "N"), ("p", "Pa"))
                         }
                     ),
 
@@ -140,9 +140,9 @@ namespace App1
                          "Ciśnienie hydrostatyczne",
                         new List<Equation>()
                         {
-                            new Equation("ph=d*a*h", (d, a, h) => d * a * h, "ph", "Pa", "fizyka.png", ("d", "kh/m^3"), ("a", "m/s^2"), ("h", "m")),
-                            new Equation("d=ph/(a*h)", (ph, a, h) => ph / (a * h), "d", "kg/m^3", "fizyka.png", ("ph", "Pa"), ("a", "m/s^2"), ("h", "m")),
-                            new Equation("h=ph/(d*a)", (ph, d, a) => ph / (d * a), "h", "m", "fizyka.png", ("ph", "Pa"), ("d", "kg/m^3"), ("a", "m/s^2"))
+                            new Equation("ph=d*g*h", (d, g, h) => d * g * h, "ph", "Pa", "fizyka.png", ("d", "kh/m^3"), ("g", "m/s^2"), ("h", "m")),
+                            new Equation("d=ph/(g*h)", (ph, g, h) => ph / (g * h), "d", "kg/m^3", "fizyka.png", ("ph", "Pa"), ("g", "m/s^2"), ("h", "m")),
+                            new Equation("h=ph/(d*g)", (ph, d, g) => ph / (d * g), "h", "m", "fizyka.png", ("ph", "Pa"), ("d", "kg/m^3"), ("g", "m/s^2"))
                         }
                     ),
 
@@ -168,10 +168,10 @@ namespace App1
 
                     new Formula
                     (
-                        "Częstkotliwość",
+                        "Częstotliwość",
                         new List<Equation>()
                         {
-                            new Equation("f=", (V, T) => V * T, "λ", "m", "fizyka.png", ("V", "m/s"), ("T", "s")),
+                            new Equation("f=V*T", (V, T) => V * T, "λ", "m", "fizyka.png", ("V", "m/s"), ("T", "s")),
                             new Equation("λ=V/f", (V, f) => V / f, "λ", "m", "fizyka.png", ("V", "m/s"), ("f", "Hz"))
                         }
                     ),

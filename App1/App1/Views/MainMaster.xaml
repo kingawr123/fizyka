@@ -9,7 +9,7 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
+        <Grid BackgroundColor="LightPink">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -24,9 +24,9 @@
           <Label
               Grid.Column="1"
               Grid.Row="2"
-              TextColor="Yellow"
+              TextColor="White"
               FontSize="Large"
-              Text="Wzory - fizyka"
+              Text="WZORY FIZYCZNE"
               Style="{DynamicResource SubtitleStyle}"/>
         </Grid>
       </ListView.Header>
@@ -36,7 +36,7 @@
             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
               <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
-                     TextColor="Black"
+                     TextColor="{StaticResource MainTextColor}"
                     Text="{Binding Title}" 
                     FontSize="24"/>
             </StackLayout>

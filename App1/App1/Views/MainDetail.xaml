@@ -4,10 +4,10 @@
              x:Class="App1.Views.MainDetail"
              Title="Detail">
   <StackLayout Padding="10">
-        <ListView x:Name="FormulasView" ItemsSource="{Binding Formulas}">
+        <ListView x:Name="FormulasView" ItemsSource="{Binding Formulas}" ItemSelected="FormulasView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" TextColor="DeepSkyBlue" Command="{Binding FormulaClicked}" CommandParameter="{Binding}"/>
+                    <TextCell Text="{Binding Name}" TextColor="{StaticResource MainTextColor}" Command="{Binding FormulaClicked}" CommandParameter="{Binding}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
