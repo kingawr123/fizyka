@@ -140,7 +140,7 @@ namespace App1
                          "Ciśnienie hydrostatyczne",
                         new List<Equation>()
                         {
-                            new Equation("ph=d*g*h", (d, g, h) => d * g * h, "ph", "Pa", "fizyka.png", ("d", "kh/m^3"), ("g", "m/s^2"), ("h", "m")),
+                            new Equation("ph=d*g*h", (d, g, h) => d * g * h, "ph", "Pa", "fizyka.png", ("d", "kg/m^3"), ("g", "m/s^2"), ("h", "m")),
                             new Equation("d=ph/(g*h)", (ph, g, h) => ph / (g * h), "d", "kg/m^3", "fizyka.png", ("ph", "Pa"), ("g", "m/s^2"), ("h", "m")),
                             new Equation("h=ph/(d*g)", (ph, d, g) => ph / (d * g), "h", "m", "fizyka.png", ("ph", "Pa"), ("d", "kg/m^3"), ("g", "m/s^2"))
                         }
