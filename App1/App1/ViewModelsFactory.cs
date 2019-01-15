@@ -150,6 +150,7 @@ namespace App1
                 }
             };
         }
+
         public static MainDetailViewModel CreateDrganiaFormulas()
         {
             return new MainDetailViewModel()
@@ -194,6 +195,33 @@ namespace App1
                             new Equation("V=λ/T", (λ, T) => λ / T, "V", "m/s", "fizyka.png", ("λ", "m"), ("T", "s")),
                             new Equation("V=λ*f", (λ, f) => λ * f, "V", "m/s", "fizyka.png", ("λ", "m"), ("f", "Hz"))
                         }
+                    ),
+                }
+            };
+        }
+
+        public static MainDetailViewModel CreateElektrycznoscFormulas()
+        {
+            return new MainDetailViewModel()
+            {
+                Formulas = new List<Formula>
+                {
+                    new Formula
+                    (
+                        "Napięcie",
+                        new List<Equation>()
+                        {
+                            new Equation("U=E/q", (E, q) => E / q, "U", "V", "fizyka.png", ("E", "J"),("q", "C"))
+                        }
+                    ),
+
+                    new Formula
+                    (
+                        "Natężenie",
+                         new List<Equation>()
+                         {
+                          new Equation("I=q/t", (q, t) => q / t, "I", "A", "fizyka.png", ("q", "C"), ("t", "s"))
+                         }
                     ),
                 }
             };

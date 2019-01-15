@@ -20,7 +20,8 @@ namespace App1.ViewModels
                 new MainMenuItem(ViewModelsFactory.CreateRuchFormulas()) { Id = 2, Title = "Ruch" },
                 new MainMenuItem(ViewModelsFactory.CreateEnergiaFormulas()) { Id = 3, Title = "Energia" },
                 new MainMenuItem(ViewModelsFactory.CreateCisnienieFormulas()) { Id = 4, Title = "Ciśnienie"},
-                new MainMenuItem(ViewModelsFactory.CreateDrganiaFormulas()) { Id = 5, Title = "Drgania"} 
+                new MainMenuItem(ViewModelsFactory.CreateDrganiaFormulas()) { Id = 5, Title = "Drgania"} ,
+                new MainMenuItem(ViewModelsFactory.CreateElektrycznoscFormulas()) { Id = 6, Title = "Elektryczność"} 
 
             });
         }
